@@ -24,7 +24,6 @@ public class Food extends Product {
     }
 
 
-
     public boolean isKosher() {
         return kosher;
     }

@@ -26,8 +26,6 @@ public class Product {
     }
 
 
-
-
     public static int barcodeGenerator() {
         int barcode = (int) (Math.random() * 9999999);
         return barcode;

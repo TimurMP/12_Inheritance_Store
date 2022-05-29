@@ -1,6 +1,6 @@
 package timur.product.model;
 
-public class MilkProduct extends Food{
+public class MilkProduct extends Food {
     String milkType;
     float fat;
 
