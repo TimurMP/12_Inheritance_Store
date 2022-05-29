@@ -1,17 +1,22 @@
 package timur.product.model;
 
 public class Product {
-    protected double barcode;
+    protected int barcode;
     protected String name;
     protected double price;
 
-    public Product(double barcode, String name, double price) {
+    public Product(int barcode, String name, double price) {
         this.barcode = barcode;
         this.name = name;
         this.price = price;
     }
 
-    public double getBarcode() {
+    public static int barcodeGenerator(){
+        int barcode = (int)(Math.random() * 9999999);
+
+        return barcode;
+    }
+    public int getBarcode() {
         return barcode;
     }
 
