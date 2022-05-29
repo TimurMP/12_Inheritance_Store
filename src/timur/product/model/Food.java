@@ -1,8 +1,8 @@
 package timur.product.model;
 
 public class Food extends Product {
-    private boolean kosher;
-    private String expDate;
+    protected boolean kosher;
+    protected String expDate;
 
 
     public Food(int barcode, String name, double price, boolean kosher, String expDate) {
@@ -15,12 +15,21 @@ public class Food extends Product {
     public void display() {
         super.display();
         String ifKosher;
-        if (kosher){
+        if (kosher) {
             ifKosher = "Kosher";
-        }
-        else {
+        } else {
             ifKosher = "Not Kosher";
         }
-        System.out.print("\n" + ifKosher + "\nExpiration Date: " +  expDate);
+        System.out.print("\n" + ifKosher + "\nExpiration Date: " + expDate);
+    }
+
+
+
+    public boolean isKosher() {
+        return kosher;
+    }
+
+    public String getExpDate() {
+        return expDate;
     }
 }

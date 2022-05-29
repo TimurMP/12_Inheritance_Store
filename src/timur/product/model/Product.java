@@ -22,16 +22,10 @@ public class Product {
         for (int i = 0; i < arr.length; i++) {
             arr[i].display();
             System.out.println("\n");
-
-
         }
-
     }
 
-    public static void  totalPriceKosher(Product[] arr){
 
-
-    }
 
 
     public static int barcodeGenerator() {
