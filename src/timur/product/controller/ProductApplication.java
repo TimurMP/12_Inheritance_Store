@@ -1,6 +1,8 @@
 package timur.product.controller;
 
 import timur.product.model.Food;
+import timur.product.model.MeatProduct;
+import timur.product.model.MilkProduct;
 import timur.product.model.Product;
 
 public class ProductApplication {
@@ -10,6 +12,12 @@ public class ProductApplication {
         store[1] = new Product(Product.barcodeGenerator(), "Sponge", 2.50);
         store[2] = new Food(Product.barcodeGenerator(), "Shrimps", 25.50, false, "25.02.25");
         store[3] = new Food(Product.barcodeGenerator(), "Chips", 13, true, "02.02.23");
+        store[4] = new MeatProduct(Product.barcodeGenerator(),"Bacon", 80, false, "03.03.23", "Pork");
+        store[5] = new MeatProduct(Product.barcodeGenerator(),"Schnitzel", 50, true, "02.02.23", "Chicken");
+        store[6] = new MilkProduct(Product.barcodeGenerator(),"GoatYoghurt", 4.90, true, "06.07.23", "Goat", 0.3F);
+        store[7] = new MilkProduct(Product.barcodeGenerator(),"Milk", 11.50, true, "08.07.29", "Cow", 3.0F);
+
+
         System.out.println(store[0].getBarcode());
         System.out.println(store[1].getBarcode());
         System.out.println(store[2].getBarcode());
