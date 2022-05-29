@@ -10,4 +10,17 @@ public class Food extends Product {
         this.kosher = kosher;
         this.expDate = expDate;
     }
+
+    @Override
+    public void display() {
+        super.display();
+        String ifKosher;
+        if (kosher){
+            ifKosher = "Kosher";
+        }
+        else {
+            ifKosher = "Not Kosher";
+        }
+        System.out.print("\n" + ifKosher + "\nExpiration Date: " +  expDate);
+    }
 }

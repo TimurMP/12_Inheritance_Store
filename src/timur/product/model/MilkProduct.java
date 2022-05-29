@@ -9,4 +9,10 @@ public class MilkProduct extends Food{
         this.milkType = milkType;
         this.fat = fat;
     }
+
+    @Override
+    public void display() {
+        super.display();
+        System.out.print("\nType of Milk: " + milkType + "\nFat: " + fat);
+    }
 }

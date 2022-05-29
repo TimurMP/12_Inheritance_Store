@@ -18,9 +18,7 @@ public class ProductApplication {
         store[7] = new MilkProduct(Product.barcodeGenerator(),"Milk", 11.50, true, "08.07.29", "Cow", 3.0F);
 
 
-        System.out.println(store[0].getBarcode());
-        System.out.println(store[1].getBarcode());
-        System.out.println(store[2].getBarcode());
+        Product.showAllProducts(store);
 
 
     }

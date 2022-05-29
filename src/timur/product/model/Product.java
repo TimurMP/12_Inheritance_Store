@@ -11,11 +11,34 @@ public class Product {
         this.price = price;
     }
 
-    public static int barcodeGenerator(){
-        int barcode = (int)(Math.random() * 9999999);
+    public void display() {
+        System.out.print("Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode);
+    }
 
+    public static void showAllProducts(Product[] arr) {
+        System.out.println("---------------");
+        System.out.println("All products:");
+        System.out.println("---------------");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i].display();
+            System.out.println("\n");
+
+
+        }
+
+    }
+
+    public static void  totalPriceKosher(Product[] arr){
+
+
+    }
+
+
+    public static int barcodeGenerator() {
+        int barcode = (int) (Math.random() * 9999999);
         return barcode;
     }
+
     public int getBarcode() {
         return barcode;
     }
