@@ -15,6 +15,10 @@ public class Product {
         System.out.print("Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode);
     }
 
+    public String toString (){
+        return "Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode;
+    }
+
     public static void showAllProducts(Product[] arr) {
         System.out.println("---------------");
         System.out.println("All products:");

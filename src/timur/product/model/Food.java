@@ -23,6 +23,17 @@ public class Food extends Product {
         System.out.print("\n" + ifKosher + "\nExpiration Date: " + expDate);
     }
 
+    public String toString(){
+        String ifKosher;
+        if (kosher) {
+            ifKosher = "Kosher";
+        } else {
+            ifKosher = "Not Kosher";
+        }
+        return super.toString() + "\n" + ifKosher + "\nExpiration Date: " + expDate;
+    }
+
+
 
     public boolean isKosher() {
         return kosher;
