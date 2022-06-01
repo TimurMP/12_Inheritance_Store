@@ -1,5 +1,7 @@
 package timur.product.model;
 
+import java.util.Objects;
+
 public class Product {
     protected int barcode;
     protected String name;
@@ -11,13 +13,35 @@ public class Product {
         this.price = price;
     }
 
-    public void display() {
-        System.out.print("Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode);
-    }
+//    public void display() {
+//        System.out.print("Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode);
+//    }
 
     
     public String toString (){
         return "Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode;
+    }
+
+//    public boolean equals (Object o){
+//        if (!(o instanceof Product)){
+//            return false;
+//        }
+//        Product other = (Product) o;
+//        return  price == other.price && name.equals(other.name) && barcode == other.barcode;
+//    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return barcode == product.barcode && Double.compare(product.price, price) == 0 && Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(barcode, name, price);
     }
 
     public static void showAllProducts(Object[] arr) {
@@ -29,6 +53,7 @@ public class Product {
             System.out.println("\n");
         }
     }
+
 
 
     public static int barcodeGenerator() {
