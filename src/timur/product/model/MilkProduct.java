@@ -15,4 +15,11 @@ public class MilkProduct extends Food {
         super.display();
         System.out.print("\nType of Milk: " + milkType + "\nFat: " + fat);
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nType of Milk: " + milkType + "\nFat: " + fat;
+    }
+
+
 }

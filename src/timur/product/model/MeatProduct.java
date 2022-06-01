@@ -14,6 +14,11 @@ public class MeatProduct extends Food {
         System.out.print("\nType of Meat: " + meatType);
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + "\nType of Meat: " + meatType;
+    }
+
     public String getMeatType() {
         return meatType;
     }

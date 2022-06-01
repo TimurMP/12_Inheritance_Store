@@ -15,16 +15,17 @@ public class Product {
         System.out.print("Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode);
     }
 
+    
     public String toString (){
         return "Name: " + name + "\nPrice: " + price + "\nBarcode: " + barcode;
     }
 
-    public static void showAllProducts(Product[] arr) {
+    public static void showAllProducts(Object[] arr) {
         System.out.println("---------------");
         System.out.println("All products:");
         System.out.println("---------------");
         for (int i = 0; i < arr.length; i++) {
-            arr[i].display();
+            System.out.println(arr[i]);;
             System.out.println("\n");
         }
     }

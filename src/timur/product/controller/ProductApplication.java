@@ -20,8 +20,7 @@ public class ProductApplication {
 
         Product.showAllProducts(store);
         totalPriceKosher(store);
-        System.out.println("$$$$$$$$$$$$$$$$$");
-        System.out.println(store[4].toString());
+
 
     }
 
